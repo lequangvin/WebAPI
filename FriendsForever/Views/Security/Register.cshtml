@@ -1,0 +1,50 @@
+﻿@model FriendsForever.ViewModels.RegisterViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div>
+    <div>
+        <img src="~/Content/images/Friends-logo.png" alt="FF logo"/>
+    </div>
+    <div>
+        @Html.ValidationSummary()
+    </div>
+    @using (Html.BeginForm())
+            {
+                <table>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.FristName, "FristName:")</td>
+                        <td>@Html.TextBoxFor(c => c.FristName)</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.LastName, "LastName:")</td>
+                        <td>@Html.TextBoxFor(c => c.LastName)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.Email, "Email:")</td>
+                        <td>@Html.TextBoxFor(c => c.Email)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.Password, "Password:")</td>
+                        <td>@Html.TextBoxFor(c => c.Password)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.LabelFor(c => c.ConfirmPassword, "ConfirmPassword:")</td>
+                        <td>@Html.TextBoxFor(c => c.ConfirmPassword)</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" value="Register" />
+                            <input type="reset" value="Reset" />
+                        </td>
+                    </tr>
+                </table>
+            }
+</div>
+
